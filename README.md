@@ -8,11 +8,12 @@ Clicking date cells user can set date range like start date to end date. Some lo
 - A user can increase or decrease the Start date and End date.
 
 ## Custom Events
-```
-//Custom Events
- EventObjects eventObjects = new EventObjects("Birth", new Date());
- List<EventObjects> eventObjectses = new ArrayList<>();
- eventObjectses.add(eventObjects);
+```java
+   //Custom Events
+   EventObjects eventObjects = new EventObjects(1, "Birth", new Date());
+   eventObjects.setColor(R.color.colorPrimary);
+   List<EventObjects> mEvents = new ArrayList<>();
+   mEvents.add(eventObjects);
 ```
 
 ## Screenshots 
