@@ -15,6 +15,8 @@ Clicking date cells user can set date range like start date to end date. Some lo
    List<EventObjects> mEvents = new ArrayList<>();
    mEvents.add(eventObjects);
 ```
+<img src="https://github.com/aliahmedbd/CustomClickableCalender/blob/master/Screenshot_20180809-174741.png" width="250" alt="Screenshot 1"/>
+
 
 ## Screenshots 
 <img src="https://github.com/aliahmedbd/CustomClickableCalender/blob/master/Screenshot_20180809-163417.png" width="250" alt="Screenshot 1"/>
