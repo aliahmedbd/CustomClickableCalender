@@ -36,7 +36,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setCalenderView() {
+        
+        //Custom Events
+        EventObjects eventObjects = new EventObjects(1, "Birth", new Date());
+        eventObjects.setColor(R.color.colorPrimary);
         List<EventObjects> mEvents = new ArrayList<>();
+        mEvents.add(eventObjects);
+       
         ViewGroup parent = (ViewGroup) custom_view.getParent();
         parent.removeView(custom_view);
         layoutCalender.removeAllViews();
