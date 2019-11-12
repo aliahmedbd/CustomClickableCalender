@@ -1,6 +1,5 @@
 package aliahmed.info.customcalender;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -36,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setCalenderView() {
-        
+
         //Custom Events
         EventObjects eventObjects = new EventObjects(1, "Birth", new Date());
         eventObjects.setColor(R.color.colorPrimary);
         List<EventObjects> mEvents = new ArrayList<>();
         mEvents.add(eventObjects);
-       
+
         ViewGroup parent = (ViewGroup) custom_view.getParent();
         parent.removeView(custom_view);
         layoutCalender.removeAllViews();
@@ -81,8 +82,12 @@ public class MainActivity extends AppCompatActivity {
                             calendarCustomView.setRangesOfDate(makeDateRanges());
                     }
                 }
+                try {
+                    Toast.makeText(MainActivity.this, "Start Date: " + initialDate.toString() + "\n End Date: " + lastDate.toString(), Toast.LENGTH_LONG).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-                Toast.makeText(MainActivity.this, "Start Date: " + initialDate.toString() + "\n End Date: " + lastDate.toString(), Toast.LENGTH_LONG).show();
             }
         });
 
